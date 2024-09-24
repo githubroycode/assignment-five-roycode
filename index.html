@@ -17,6 +17,7 @@
         body {
             font-family: "Lexend", sans-serif;
         }
+
     </style>
     <title> 1 Donation Bangladesh</title>
 </head>
@@ -36,7 +37,7 @@
                     </div>
                     <div class="flex items-center justify-center mr-4 md:mr-20">
                         <img class="h-8 w-8" src="./assets/coin.png" alt="">
-                        <p class="font-bold text-xl ml-2">5500 <span>BDT</span></p>
+                        <p id="account-balance" class="font-bold text-xl ml-2">5500 </p><p class="font-bold text-xl ml-2">BDT</p>
                     </div>
                 </div>
             </div>
@@ -87,7 +88,7 @@
                             <div class="text-div-two">
                                 <input id="addedDonation-one" type="text" class="w-full p-2 border rounded mb-4"
                                     placeholder="Write Donation Amount">
-                                <button id="donate-btn-one" class="btn w-full px-4 py-2 bg-green-400 text-black font-bold rounded">Donate
+                                <button id="donate-btn-one" class="btn openModalBtn w-full px-4 py-2 bg-green-400 text-black font-bold rounded">Donate
                                     Now</button>
                             </div>
                         </div>
@@ -211,6 +212,7 @@
 
     <script src="script/library.js"></script>
     <script src="script/features.js"></script>
+    <script src="script/test.js"></script>
     
 </body>
 

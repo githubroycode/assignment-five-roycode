@@ -1,13 +1,26 @@
 document.getElementById('donate-btn-one')
-    .addEventListener('click', function(event){
-        event.preventDefault();
+    .addEventListener('click', function () {
+
 
         const donationMoney = getInputFieldById('addedDonation-one');
-        console.log('One add money inside add: ', donationMoney);
+
+        if (typeof donationMoney === 'number' && !isNaN(donationMoney) && donationMoney >= 0) {
+            const balance = getTextFieldById('account-balance');
+            const newBalance = balance - donationMoney;
+
+            document.getElementById('account-balance').innerText = newBalance;
+
+        }
+        else{
+            alert("Invalid number.")
+        }
+
+
+
     })
 
 document.getElementById('donate-btn-two')
-    .addEventListener('click', function(event){
+    .addEventListener('click', function (event) {
         event.preventDefault();
 
         const donationMoney = getInputFieldById('addedDonation-two');
@@ -15,7 +28,7 @@ document.getElementById('donate-btn-two')
     })
 
 document.getElementById('donate-btn-three')
-    .addEventListener('click', function(event){
+    .addEventListener('click', function (event) {
         event.preventDefault();
 
         const donationMoney = getInputFieldById('addedDonation-three');
