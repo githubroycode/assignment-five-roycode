@@ -57,6 +57,8 @@ document.getElementById('donate-btn-three')
         }
     })
 
+    
+// switchable buttons
 document.getElementById('donationBtn')
     .addEventListener('click', function () {
         showSectionById('donationId');
@@ -69,13 +71,11 @@ document.getElementById('historyBtn')
     })
 
 
-
+// History Time
 const p = document.createElement('p');
 
 const bangladeshTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Dhaka" });
 
 p.innerText = `Bangladesh Time: ${bangladeshTime}`;
-
-document.body.appendChild(p);
 
 document.getElementById('bdTime').appendChild(p);
