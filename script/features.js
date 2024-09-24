@@ -12,7 +12,7 @@ document.getElementById('donate-btn-one')
             document.getElementById('account-balance').innerText = newBalance;
 
         }
-        else{
+        else {
             alert("Invalid number.")
         }
     })
@@ -31,20 +31,20 @@ document.getElementById('donate-btn-two')
             document.getElementById('account-balance').innerText = newBalance;
 
         }
-        else{
+        else {
             alert("Invalid number.")
         }
-        
+
     })
 
 // For btn Three
 
 document.getElementById('donate-btn-three')
     .addEventListener('click', function () {
-        
+
 
         const donationMoney = getInputFieldById('addedDonation-three');
-        
+
         if (typeof donationMoney === 'number' && !isNaN(donationMoney) && donationMoney >= 0) {
             const balance = getTextFieldById('account-balance');
             const newBalance = balance - donationMoney;
@@ -52,18 +52,30 @@ document.getElementById('donate-btn-three')
             document.getElementById('account-balance').innerText = newBalance;
 
         }
-        else{
+        else {
             alert("Invalid number.")
         }
     })
 
-    document.getElementById('donationBtn')
-        .addEventListener('click', function(){
-            showSectionById('donationId');
-        })
+document.getElementById('donationBtn')
+    .addEventListener('click', function () {
+        showSectionById('donationId');
+    })
 
-    //historyBtn
-    document.getElementById('historyBtn')
-    .addEventListener('click', function(){
+//historyBtn
+document.getElementById('historyBtn')
+    .addEventListener('click', function () {
         showSectionById('historyId');
     })
+
+
+
+const p = document.createElement('p');
+
+const bangladeshTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Dhaka" });
+
+p.innerText = `Bangladesh Time: ${bangladeshTime}`;
+
+document.body.appendChild(p);
+
+document.getElementById('bdTime').appendChild(p);
