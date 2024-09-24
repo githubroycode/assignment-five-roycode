@@ -22,7 +22,7 @@ document.getElementById('donate-btn-one')
 document.getElementById('donate-btn-two')
     .addEventListener('click', function () {
 
-        const donationMoney = getInputFieldById('addedDonation-two');
+        const donationMoney = getInputFieldById('neBalance');
 
         if (typeof donationMoney === 'number' && !isNaN(donationMoney) && donationMoney >= 0) {
             const balance = getTextFieldById('account-balance');
