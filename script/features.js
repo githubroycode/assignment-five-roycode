@@ -1,3 +1,4 @@
+// For btn One
 document.getElementById('donate-btn-one')
     .addEventListener('click', function () {
 
@@ -14,23 +15,55 @@ document.getElementById('donate-btn-one')
         else{
             alert("Invalid number.")
         }
-
-
-
     })
+
+// For btn Two
 
 document.getElementById('donate-btn-two')
-    .addEventListener('click', function (event) {
-        event.preventDefault();
+    .addEventListener('click', function () {
 
         const donationMoney = getInputFieldById('addedDonation-two');
-        console.log('Two add money inside add: ', donationMoney);
+
+        if (typeof donationMoney === 'number' && !isNaN(donationMoney) && donationMoney >= 0) {
+            const balance = getTextFieldById('account-balance');
+            const newBalance = balance - donationMoney;
+
+            document.getElementById('account-balance').innerText = newBalance;
+
+        }
+        else{
+            alert("Invalid number.")
+        }
+        
     })
 
+// For btn Three
+
 document.getElementById('donate-btn-three')
-    .addEventListener('click', function (event) {
-        event.preventDefault();
+    .addEventListener('click', function () {
+        
 
         const donationMoney = getInputFieldById('addedDonation-three');
-        console.log('Three add money inside add: ', donationMoney);
+        
+        if (typeof donationMoney === 'number' && !isNaN(donationMoney) && donationMoney >= 0) {
+            const balance = getTextFieldById('account-balance');
+            const newBalance = balance - donationMoney;
+
+            document.getElementById('account-balance').innerText = newBalance;
+
+        }
+        else{
+            alert("Invalid number.")
+        }
+    })
+
+    document.getElementById('donationBtn')
+        .addEventListener('click', function(){
+            showSectionById('donationId');
+        })
+
+    //historyBtn
+    document.getElementById('historyBtn')
+    .addEventListener('click', function(){
+        showSectionById('historyId');
     })
